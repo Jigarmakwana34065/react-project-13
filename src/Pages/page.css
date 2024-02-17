@@ -5,8 +5,13 @@
   font-family: "Open Sans", sans-serif;
 }
 
-ol, ul {
+ol,
+ul {
   list-style-type: none;
+}
+
+a {
+  text-decoration: none;
 }
 
 .container {
@@ -36,7 +41,7 @@ ol, ul {
   padding-bottom: 20px;
 }
 .login-section .container .row .login-form form .register-link {
-  padding: 25px 0px 35pxx;
+  padding: 25px 0px 35px;
 }
 .login-section .container .row .login-form form .register-link h3 {
   font-size: 18px;
@@ -44,16 +49,20 @@ ol, ul {
 }
 .login-section .container .row .login-form form .register-link a {
   color: #23b7c2;
+  text-decoration: underline;
 }
-.login-section .container .row .login-form form .login-email, .login-section .container .row .login-form form .login-password {
+.login-section .container .row .login-form form .login-email,
+.login-section .container .row .login-form form .login-password {
   padding-bottom: 15px;
 }
-.login-section .container .row .login-form form .login-email label, .login-section .container .row .login-form form .login-password label {
+.login-section .container .row .login-form form .login-email label,
+.login-section .container .row .login-form form .login-password label {
   color: #323a45;
   display: block;
   padding-bottom: 12px;
 }
-.login-section .container .row .login-form form .login-email input, .login-section .container .row .login-form form .login-password input {
+.login-section .container .row .login-form form .login-email input,
+.login-section .container .row .login-form form .login-password input {
   width: 100%;
   outline: none;
   padding: 10px;
@@ -63,6 +72,22 @@ ol, ul {
   color: #5e6d81;
   font-size: 17px;
 }
-.login-section .container .row .login-form form .login-email input:focus, .login-section .container .row .login-form form .login-password input:focus {
+.login-section .container .row .login-form form .login-email input:focus,
+.login-section .container .row .login-form form .login-password input:focus {
   box-shadow: 0px 0px 2px 0px gray;
+}
+.login-section .container .row .login-form form .btn {
+  padding: 8px 0px;
+}
+.login-section .container .row .login-form form .btn button {
+  border: 0;
+  background-color: #fa7135;
+  color: white;
+  font-size: 20px;
+  text-transform: capitalize;
+  text-align: center;
+  font-weight: 500;
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
 }/*# sourceMappingURL=page.css.map */

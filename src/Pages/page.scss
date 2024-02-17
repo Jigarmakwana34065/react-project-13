@@ -5,8 +5,13 @@
   font-family: "Open Sans", sans-serif;
 }
 
-ol,ul {
-    list-style-type: none;
+ol,
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
 }
 
 .container {
@@ -16,6 +21,7 @@ ol,ul {
 
 .login-section {
   padding: 25px 0px;
+
   .container {
     .row {
       .login-form {
@@ -30,6 +36,7 @@ ol,ul {
             padding-bottom: 30px;
             color: #5e6d81;
           }
+
           p {
             text-align: center;
             color: #5e6d81;
@@ -39,17 +46,21 @@ ol,ul {
           }
 
           .register-link {
-            padding: 25px 0px 35pxx;
+            padding: 25px 0px 35px;
+
             h3 {
               font-size: 18px;
               font-weight: 500;
             }
+
             a {
               color: #23b7c2;
+              text-decoration: underline;
             }
           }
 
-          .login-email, .login-password {
+          .login-email,
+          .login-password {
             padding-bottom: 15px;
 
             label {
@@ -59,18 +70,34 @@ ol,ul {
             }
 
             input {
-                width: 100%;
-                outline: none;
-                padding: 10px;
-                border: 0px;
-                border: 1px solid gray;
-                border-radius: 8px;
-                color: #5e6d81;
-                font-size: 17px;
-                
-                &:focus {
-                    box-shadow: 0px 0px 2px 0px gray;
-                }
+              width: 100%;
+              outline: none;
+              padding: 10px;
+              border: 0px;
+              border: 1px solid gray;
+              border-radius: 8px;
+              color: #5e6d81;
+              font-size: 17px;
+
+              &:focus {
+                box-shadow: 0px 0px 2px 0px gray;
+              }
+            }
+          }
+
+          .btn {
+            padding: 8px 0px;
+            button {
+              border: 0;
+              background-color: #fa7135;
+              color: white;
+              font-size: 20px;
+              text-transform: capitalize;
+              text-align: center;
+              font-weight: 500;
+              width: 100%;
+              padding: 12px;
+              border-radius: 12px;
             }
           }
         }

@@ -1,8 +1,10 @@
- import axios from 'axios'
+import axios from 'axios'
 import React, { useState } from 'react'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import "./page.css"
+import { signInWithPopup } from 'firebase/auth';
+import { auth, google } from '../firebase';
 
 const Login = () => {
 
@@ -12,14 +14,20 @@ const Login = () => {
     const handleSubmit = async (e) => {
         e.preventDefault()
 
-        const loginUser = await axios.get(`http://localhost:8000/user?email=${email}&password=${password}`)
+        try {
+
+            let googleAuth = await signInWithPopup(auth,google)
+
+        } catch (err) {
+            console.log(err);
+            return false
+        }
+
+        alert("Google Authentication successfully")
 
         setEmail('')
         setPassword('')
 
-        toast.success("Login successfully.")
-
-        console.log(loginUser.data);
     }
 
     return (
@@ -40,13 +48,16 @@ const Login = () => {
                                 <label>
                                     Email address
                                 </label>
-                                <input type="text" />
+                                <input type="text" onChange={(e) => setEmail(e.target.value)} value={email} />
                             </div>
                             <div className="login-password">
                                 <label>
                                     Password
                                 </label>
-                                <input type="text" />
+                                <input type="text" onChange={(e) => setPassword(e.target.value)} value={password} />
+                            </div>
+                            <div className="btn">
+                                <button type='submit'>login with google</button>
                             </div>
                         </form>
                     </div>
