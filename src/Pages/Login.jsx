@@ -25,8 +25,8 @@ const Login = () => {
 
         alert("Google Authentication successfully")
 
-        setEmail('')
-        setPassword('')
+        setEmail("")
+        setPassword("")
 
     }
 
